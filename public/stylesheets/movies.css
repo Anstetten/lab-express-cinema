@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    
+}
+
+body{
+    background-image: url('../images/cinema.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+#wrapper{
+    min-width: 66%;
+    max-width: 90%;
+    background-color: rgba(245, 217, 105, 0.747);
+    border-radius: 10px;
+}
+
+#gridContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    gap:15px;
+    padding:1%;
+}
+
+.movieCard{
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: flex-start;
+ margin: 1rem 2rem;
+}
+
+
+.movieCard h6, .movieCard a{
+    align-self: center;
+    margin: 5px 0;
+}
+
+.movieCard img{
+    width:70%;
+   }
+
+@media (min-width: 480px){
+    .movieCard{
+        align-items: center;
+    }
+
+    .movieCard h6, .movieCard a{
+        align-self: center;
+    }
+}
