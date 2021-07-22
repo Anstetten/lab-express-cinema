@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    
+}
+
+body{
+    background-image: url('../images/cinema.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+#wrapper{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 65%;
+    height: 50%;
+    background-color: rgba(245, 217, 105, 0.747);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#divInfo{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#wrapper>div{
+    margin: 1% 5%;
+}
+
+img{
+ height: 90%;
+}
+#divImage{
+    max-width: 50%;
+}
+
+#description{
+    max-width: 40%;
+}
+
+
+@media (min-width: 480px){
+    img{
+        height:100%;
+    }
+
+    .movieCard h6, .movieCard a{
+        align-self: center;
+    }
+
+}

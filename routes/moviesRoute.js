@@ -15,4 +15,19 @@ router.get ('/movies',(req,res)=>{
         .catch((error)=>{console.log(error);});
 });
 
+
+//Get an individiam movie
+
+router.get ('/movies/:id', (req,res)=>{
+    movieModel.findById(req.params.id)
+        .then((movieFound)=>{
+            console.log(movieFound);
+            res.render("oneMovie.hbs",{
+                css: ["oneMovie.css"],
+                movie: movieFound,
+            })
+        })
+        .catch((error)=>{console.log(error);});
+});
+
 module.exports =router;
